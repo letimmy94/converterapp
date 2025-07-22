@@ -60,7 +60,15 @@ struct ContentView: View {
                         Text("Text Field")
                     }                }
                 // conversion section
-                Spacer()
+               // Spacer()
+                
+                Button {
+                    
+                } label: {
+                    Image(systemName: "info.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                }
             }
 //            .border(.red)
         }
