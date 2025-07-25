@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showExchangeSymbol = false
+    
     var body: some View {
         ZStack {
             // background
@@ -60,14 +62,18 @@ struct ContentView: View {
                         Text("Text Field")
                     }                }
                 // conversion section
-               // Spacer()
+                Spacer()
                 
-                Button {
-                    
-                } label: {
-                    Image(systemName: "info.circle.fill")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
+                HStack {
+                    Spacer()
+                    Button {
+                        showExchangeSymbol.toggle()
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.trailing)
                 }
             }
 //            .border(.red)
