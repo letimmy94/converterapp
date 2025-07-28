@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showExchangeSymbol = false
+    @State var leftAmount = ""
+    @State var rightAmount = ""
     
     var body: some View {
         ZStack {
@@ -40,7 +42,7 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                         // text field
-                        Text("Text Field")
+                        TextField("Amount", text: $leftAmount)
                     }
                     // Equal sign
                     Image(systemName: "equal")
