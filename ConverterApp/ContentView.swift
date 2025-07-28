@@ -41,8 +41,10 @@ struct ContentView: View {
                                 .font(.headline)
                                 .foregroundStyle(.white)
                         }
+                        .padding(.bottom, -5)
                         // text field
                         TextField("Amount", text: $leftAmount)
+                            .textFieldStyle(.roundedBorder)
                     }
                     // Equal sign
                     Image(systemName: "equal")
@@ -61,8 +63,16 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(height: 33)                        }
                         // text field
-                        Text("Text Field")
-                    }                }
+                        .padding(.bottom, -5)
+                        
+                        TextField("Amount", text: $rightAmount)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.trailing)
+                    }
+                }
+                .padding()
+                .background(.black.opacity(0.5))
+                .clipShape(.capsule)
                 // conversion section
                 Spacer()
                 
