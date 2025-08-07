@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExchanceInfo: View {
+struct ExchangeInfo: View {
     var body: some View {
         ZStack{
             // background image
@@ -27,20 +27,11 @@ struct ExchanceInfo: View {
                     .font(.title3)
                     .padding()
                 // exchange rates
-                HStack{
-                    // left currency image
-                    Image(.goldpiece)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 33)
-                    // exchange rate text
-                    Text("1 Gold Piece = 4 Gold Pennies")
-                    // right currency image
-                    Image(.goldpenny)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 33)
-                }
+                ExtractedView()
+                ExtractedView()
+                ExtractedView()
+                ExtractedView()
+
                 // done button
                 Button("Done") {
                     
@@ -55,5 +46,30 @@ struct ExchanceInfo: View {
 }
 
 #Preview {
-    ExchanceInfo()
+    ExchangeInfo()
+}
+
+struct ExtractedView: View {
+    var body: some View {
+        HStack{
+            // left currency image
+            Image(.goldpiece)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 33)
+            // exchange rate text
+            Text("1 Gold Piece = 4 Gold Pennies")
+            // right currency image
+            Image(.goldpenny)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 33)
+        }
+    }
+}
+
+
+
+#Preview {
+    
 }
